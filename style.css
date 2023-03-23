@@ -1,5 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
 
+@keyframes body-shake {
+  0% {
+    width: 150px;
+  }
+  50% {
+    width: 170px;
+  }
+  100% {
+    width: 150px;
+  }
+}
+
+@keyframes head {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
+}
+
 body {
   background-color: #b4e8cb;
   font-family: "Patrick Hand SC", cursive;
@@ -7,7 +50,7 @@ body {
 
 .postal {
   position: absolute;
-  left: 50%;
+  left: 30%;
   top: 50%;
   transform: translate(-50%, -80%);
   -webkit-transform: translate(-50%, -80%);
@@ -179,7 +222,7 @@ body {
   visibility: visible;
   font-size: 60px;
   /* position: absolute;
-    left: 40px; */
+  left: 40px; */
   transition: all 0.2s ease-out;
   -webkit-transform: all 0.2s ease-out;
   -moz-transform: all 0.2s ease-out;
@@ -199,4 +242,36 @@ body {
   -moz-transform: all 0.2s ease-out;
   -o-transform: all 0.2s ease-out;
   -ms-transform: all 0.2s ease-out;
+}
+
+.casca--opened {
+  background: red;
+}
+
+.casca--opened .casca-topleft {
+  top: -150px;
+  transform: rotate(5deg);
+}
+
+.casca--opened .casca-topright {
+  top: -150px;
+  transform: rotate(-15deg);
+}
+.casca--opened .casca-bottomleft {
+  top: 160px;
+}
+.casca--opened .casca-bottomright {
+  top: 160px;
+}
+
+.texto--opened::before {
+  opacity: 0;
+  visibility: hidden;
+  left: -25px;
+}
+
+.texto--opened::after {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
 }

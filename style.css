@@ -221,8 +221,6 @@ body {
   opacity: 1;
   visibility: visible;
   font-size: 60px;
-  /* position: absolute;
-  left: 40px; */
   transition: all 0.2s ease-out;
   -webkit-transform: all 0.2s ease-out;
   -moz-transform: all 0.2s ease-out;

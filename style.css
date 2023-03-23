@@ -231,7 +231,7 @@ body {
 }
 
 .texto::after {
-  content: "Páscoa Feliz sarinha";
+  content: "Páscoa Feliz";
   opacity: 0;
   visibility: hidden;
   position: absolute;
